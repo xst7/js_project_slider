@@ -1,0 +1,194 @@
+@font-face {
+    src: url('../fonts/YesevaOne-Regular.ttf');
+    font-family: 'YesevaOne Regular';
+}
+@font-face {
+    src: url('../fonts/NunitoSans-Light.ttf');
+    font-family: 'NunitoSans Light';
+}
+@font-face {
+    src: url('../fonts/NunitoSans-Italic.ttf');
+    font-family: 'NunitoSans Italic';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #131313;
+    height: 780px;
+}
+
+.container {
+    display: flex;
+    align-self: center;
+    justify-content:space-between;
+    max-width: 1263px;
+    padding: 25px;
+}
+
+div.projects-description {
+    padding-right: 75px;
+}
+
+h1 {
+    color:#E3B873;
+    font-family: 'YesevaOne Regular', Arial, Helvetica, serif;
+    font-size: 27px;
+    line-height: 37px;
+    margin-top: 0px;
+}
+
+h2 {
+    color:#E3B873;
+    font-family: 'YesevaOne Regular', Arial, Helvetica, serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+p {
+    color:white;
+    font-family: 'Nunito Sans', Arial, Helvetica, serif;
+    font-size: 14px;
+    line-height: 30px;
+    width: 500px;
+}
+
+.description-sub {
+    color:white;
+    font-family: 'Nunito Sans', Arial, Helvetica, serif;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+.specifications {
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 100px 100px;
+}
+
+div.switcher {
+    display: flex;
+    justify-content: space-between;
+    max-width: 150px;
+    padding-top: 60px;
+}
+
+/*верхняя навигация*/
+
+.header-link {
+  display: flex;
+  margin: -40px 0 20px 0;
+  padding: 0;
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    justify-items: left;
+}
+
+.link {
+    color:hsl(0, 0%, 30%);
+    font-family: 'YesevaOne Regular', Arial, Helvetica, serif;
+    font-size: 14px;
+    line-height: 19px;
+    transition: color 0.2s;
+    text-decoration: none;
+    padding-right: 50px;
+    cursor: pointer;
+}
+  
+.link:hover {
+  color: #E3B873;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.image{
+  background-image: url(https://img.rialto.by/upload/720/ambiente-cucina-marble-boutique-noce.jpg);
+  background-size: cover;
+  width: 680px;
+  height: 480px;
+}
+
+/* кнопки влево и вправо */
+
+.itc-slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    background: rgb(0 0 0 / 20%);
+    border: none;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .itc-slider-btn-hide {
+    display: none;
+  }
+  
+  .itc-slider-btn-prev {
+    left: 0;
+  }
+  
+  .itc-slider-btn-next {
+    right: 0;
+  }
+
+  .itc-slider-btn:hover,
+  .itc-slider-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  .itc-slider-btn::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  .itc-slider-btn-prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  
+  .itc-slider-btn-next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+
+  /* индикаторы */
+
+  .itc-slider-indicators {
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+    padding-left: 0;
+    list-style: none;
+  }
+  
+  .itc-slider-indicator {
+    flex: 0 1 auto;
+    box-sizing: content-box;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-indent: -999px;
+    background-color: rgb(255 255 255 / 50%);
+    cursor: pointer;
+  }
+  
+  .itc-slider-indicator-active {
+    background-color: rgb(255 255 255 / 90%);
+  }
